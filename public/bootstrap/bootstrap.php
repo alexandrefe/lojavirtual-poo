@@ -1,5 +1,5 @@
 <?php
 
-$controller = new App\Controller\Controller;
+$controller = new App\Controllers\Controller;
 
 dump($controller->getController());
