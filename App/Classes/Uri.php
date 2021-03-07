@@ -2,20 +2,22 @@
 
 namespace App\Classes;
 
-class Uri {
+class Uri
+{
+    private $uri;
 
-  private $uri;
+    public function __CONSTRUCT()
+    {
+        $this->uri = $_SERVER['REQUEST_URI'];
+    }
 
-  public function __CONSTRUCT() {
-    $this->uri = $_SERVER['REQUEST_URI'];
-  }
+    public function emptyUri()
+    {
+        return ($this->uri == '/') ? true : false;
+    }
 
-  public function emptyUri(){
-    return ($this->uri == '/') ? true : false;
-  }
-
-  public function getUri() {
-    return $this->uri;
-  }
-
+    public function getUri()
+    {
+        return $this->uri;
+    }
 }

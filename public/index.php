@@ -1,17 +1,15 @@
 <?php
 
 if (preg_match('/\.(?:png|jpg|jpeg|gif)$/', $_SERVER["REQUEST_URI"])) {
-  // serve the requested resource as-is.  
-  return false;    
-} else { 
-  
-  session_start();
+    // serve the requested resource as-is.
+    return false;
+} else {
+    session_start();
 
-  define('DEFAULT_CONTROLLER', 'home');
-  define('DEFAULT_METHOD', 'index');
+    define('DEFAULT_CONTROLLER', 'home');
+    define('DEFAULT_METHOD', 'index');
 
-  require '../vendor/autoload.php';
-  require '../App/Functions/functions_twig.php';
-  require 'bootstrap/bootstrap.php';
-
+    require '../vendor/autoload.php';
+    require '../App/Functions/functions_twig.php';
+    require 'bootstrap/bootstrap.php';
 }

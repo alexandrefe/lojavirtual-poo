@@ -8,13 +8,13 @@ class Template
         return new \Twig\Loader\FilesystemLoader([
           dirname(__FILE__, 2).'/Views/site/',
           dirname(__FILE__, 2).'/Views/Admin/'
-      ]);
+      ]); 
     }
     public function init()
     {
         return new \Twig\Environment($this->loader(), [
-      'debug' => true,
-      'auto_reload' => true
-    ]);
+          'debug' => true,
+          'auto_reload' => true
+        ]);
     }
 }
